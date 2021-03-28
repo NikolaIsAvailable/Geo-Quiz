@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+
 import './App.css';
+import ChooseExercises from './Components/ChooseExercises';
 
 function App() {
+  const [displayChooseExercises, setDisplayChooseExercises] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>GeoQuiz</h1>
+      { displayChooseExercises
+        ? <ChooseExercises />
+
+        : <div className="d-flex flex-column justify-content-center align-items-center" style={{ height: '50vh'}}>
+        <button className="start-bouton" onClick={() => setDisplayChooseExercises(true)}>Go !</button>
+      </div>
+        
+      }
+      
     </div>
   );
 }
