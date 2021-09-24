@@ -8,16 +8,20 @@ function App() {
 
   return (
     <div className="App">
-      <h1>GeoQuiz</h1>
-      { displayChooseExercises
-        ? <ChooseExercises />
+      <main id="main">
+        <header>
+          <div>
+            <h1><i className="fas fa-search-location"></i> GeoQuiz <i className="fas fa-globe-europe"></i></h1>
+          </div>
+        </header>
+        { displayChooseExercises
+          ? <ChooseExercises />
 
-        : <div className="d-flex flex-column justify-content-center align-items-center" style={{ height: '50vh'}}>
-        <button className="start-bouton" onClick={() => setDisplayChooseExercises(true)}>Go !</button>
-      </div>
-        
-      }
-      
+          : <div className="d-flex flex-column justify-content-center align-items-center" style={{ height: '50vh' }}>
+              <button className="start-bouton" onClick={() => setDisplayChooseExercises(true)}>Go !</button>
+            </div>        
+        }      
+      </main>
     </div>
   );
 }

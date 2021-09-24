@@ -13,7 +13,7 @@ type QuizArray = {
     answer: string;
 }
 
-export const shuffle = (arr:QuizArray []) => {
+export const shuffle = (arr:QuizArray [] | string[]) => {
     let ctr = arr.length, temp, index
 
     // While there are elements in the array
@@ -29,3 +29,8 @@ export const shuffle = (arr:QuizArray []) => {
     }
     return arr
 }
+
+export const circumference = (r: string) => {
+    return parseFloat(r);
+  }
+  
